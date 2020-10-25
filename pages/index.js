@@ -13,7 +13,7 @@ const Index = ({ posts, title, description, ...props }) => {
             src="/static/ship.jpg"
             alt="Shiplet bio picture"
           />
-          <h1 className="title">A Well-Developed Life</h1>
+          <h1 className="title">shiplet.dev</h1>
         </section>
 
         <p className="description">
