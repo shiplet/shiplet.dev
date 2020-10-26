@@ -1,6 +1,7 @@
 import Link from "next/link";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
+import CodeBlock from "@renderers/CodeBlock";
 
 import Layout from "@components/Layout";
 import getSlugs from "@utils/getSlugs";
@@ -30,7 +31,11 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
             />
           )}
           <div>
-            <ReactMarkdown source={markdownBody} className="content" />
+            <ReactMarkdown
+              renderers={{ code: CodeBlock }}
+              source={markdownBody}
+              className="content"
+            />
           </div>
         </article>
       </Layout>
