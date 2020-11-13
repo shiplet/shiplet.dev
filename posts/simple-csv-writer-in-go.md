@@ -31,7 +31,7 @@ type CustomCSVRecord struct {
 	ColumnC string
 }
 
-func (c *CustomCSVRecord) ToString() []string {
+func (c *CustomCSVRecord) ToCsvString() []string {
 	return []string{
 		c.ColumnA, c.ColumnB, c.ColumnC,
 	}
@@ -55,7 +55,7 @@ func buildCSV(inMemCSV *CustomCSVWriter) {
 			ColumnB: "test2",
 			ColumnC: "test3",
 		}
-		inMemCSV.Records = append(inMemCSV.Records, record.ToString())
+		inMemCSV.Records = append(inMemCSV.Records, record.ToCsvString())
 	}
 }
 
