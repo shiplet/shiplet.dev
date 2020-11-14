@@ -31,8 +31,8 @@ import (
 	"net/http"
 )
 
-func LocalServer(proxyHandler func(event *events.APIGatewayProxyRequest)(*events.APIGatewayProxyResponse, error)) {
-	http.HandleFunc("/.netlify/functions/get-submission-data", handleLocal(proxyHandler))
+func LocalServer(endpointMock string, proxyHandler func(event *events.APIGatewayProxyRequest)(*events.APIGatewayProxyResponse, error)) {
+	http.HandleFunc(endpointMock, handleLocal(proxyHandler))
 	http.ListenAndServe(":3000", nil)
 }
 
