@@ -97,7 +97,7 @@ import "main/localServer"
 
 func main() {
 	//lambda.Start(HandleEvent)
-	localServer.LocalServer(HandleEvent)
+	localServer.LocalServer("/YOUR_ENDPOINT", HandleEvent)
 }
 ```
 
