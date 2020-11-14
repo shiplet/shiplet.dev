@@ -8,13 +8,13 @@ I've been writing a lot of Netlify (AWS Lambda) functions lately, and I got tire
 entirely separate control flow in order to test my logic. I wanted to be able to run these functions locally
 just like the JavaScript peeps.
 
-So I created this little localServer package! It's not published anywhere yet, so I'll update this if/when that happens. But, the 
+So I created this little localServer package! It's not published in git anywhere yet, so I'll update this if/when that happens. But, the 
 gist of what's going on is: I made a stdlib golang http server that captures incoming http events, mocks them to the
 `events.APIGatewayProxyRequest` and `events.APIGatewayProxyResponse` objects that the `github.com/aws/aws-lambda-go/events` 
-looks for, and passes those objects along to main AWS handler.
+looks for, and which then passes those objects along to the main AWS handler.
 
 So far it only supports GET, POST, and OPTIONS requests (it throws `Access-Control-Allow-Origin: *` on everything), and it 
-only mocks the `APIGatewayProxy` items that I'm actually using, like `Method`, `QueryStringParameters`, `Body`,
+only mocks the proxy items that I'm actually using, like `Method`, `QueryStringParameters`, `Body`,
 and so forth. But it's working for me so far, and that's as good a place to start as any.
 
 I'm sure the function signatures could stand some cleaning-up, but I'll get there when I get there.
