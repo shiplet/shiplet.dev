@@ -2,6 +2,11 @@
 title: "How to Serve Golang Netlify Functions Locally"
 author: "Shiplet"
 date: "2020-11-13"
+host: "https://shiplet.dev"
+description: "A quick & dirty local server for Netlify functions written in golang"
+imgUrl: "https://shiplet.dev/static/triangle.png"
+fbUrl: "https://shiplet.dev/post/serve-golang-netlify-function-local"
+twDomain: "shiplet.dev"
 ---
 
 I've been writing a lot of Netlify (AWS Lambda) functions lately, and I got tired of having to create an

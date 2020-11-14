@@ -4,9 +4,21 @@ import PostList from "@components/PostList";
 import getPosts from "@utils/getPosts";
 
 const Index = ({ posts, title, description, ...props }) => {
+  var ogData = {
+    url: "https://shiplet.dev",
+    imgUrl: "https://shiplet.dev/static/triangle",
+    fb: {
+      url: "https://shiplet.dev",
+      title: "shiplet.dev"
+    },
+    tw: {
+      domain: "shiplet.dev",
+      title: "shiplet.dev"
+    }
+  }
   return (
     <>
-      <Layout pageTitle={title} description={description}>
+      <Layout pageTitle={title} description={description} ogData={ogData}>
         <section className="hero">
           <img
             className="bio-img"

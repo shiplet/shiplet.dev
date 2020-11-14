@@ -2,6 +2,11 @@
 title: "Building a Physics Engine for the DOM: Part 1"
 author: "Shiplet"
 date: "2020-05-08"
+host: "https://shiplet.dev"
+description: "Some background on my interest in physics engines"
+imgUrl: "https://shiplet.dev/static/triangle.png"
+fbUrl: "https://shiplet.dev/post/building-a-physics-engine-part-1"
+twDomain: "shiplet.dev"
 ---
 
 I got into programming because I wanted to build video games. I love telling stories, I'm an illustrator, an accomplished musician & composer, but the part of games that always eluded me was the programming. I bought myself a couple books on C and C++, started learning Python, downloaded Unity but found that it worked with JavaScript and C#. By the time I felt I had all I needed to start building the game, I was so overwhelmed by the things I _didn't_ know, that the things I _did_ know paled in comparison. I also tend to build up volcanoes of energy for an idea only to have them sputter to little more than a cough by the time I feel like I'm actually ready to start. It's all very discouraging, and given that in order to build a game I felt like I would have to learn the totality of Computer Science, Linear Algebra, and Differential Calculus, I quickly gave up on the idea.

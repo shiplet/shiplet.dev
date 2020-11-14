@@ -2,6 +2,11 @@
 title: "Vehicle Maintenance and Minor Repair Shopping List"
 author: "Shiplet"
 date: "2020-06-19"
+host: "https://shiplet.dev"
+description: "A shopping list for beginner car maintainers"
+imgUrl: "https://shiplet.dev/static/triangle.png"
+fbUrl: "https://shiplet.dev/post/vehicle-maintenance-and-minor-repair-shopping-list"
+twDomain: "shiplet.dev"
 ---
 
 I’ve been wanting to take greater ownership of my vehicle maintenance for years, so I finally bought a Chilton manual for my Tacoma. In the opening pages there’s an extensive list of tools recommended for someone like me: not much experience, but wanting to take care of minor maintenance and repairs by myself. I’ve never really had the opportunity to learn from anyone on a consistent basis, so finally having a guide that shows both what tools I need and how to perform the tasks is something I’m very excited about.

@@ -8,10 +8,23 @@ import getSlugs from "@utils/getSlugs";
 
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   if (!frontmatter) return <></>;
+  var ogData = {
+    url: frontmatter.host,
+    description: frontmatter.description,
+    imgUrl: frontmatter.imgUrl,
+    fb: {
+      url: frontmatter.fbUrl,
+      title: frontmatter.title
+    },
+    tw: {
+      domain: frontmatter.twDomain,
+      title: frontmatter.title
+    }
+  }
 
   return (
     <>
-      <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
+      <Layout pageTitle={`shiplet.dev | ${frontmatter.title}`} ogData={ogData}>
         <div className="back">
           ←{" "}
           <Link href="/">

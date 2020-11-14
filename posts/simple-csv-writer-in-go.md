@@ -2,6 +2,11 @@
 title: "A Simple CSV Writer in Go"
 author: "Shiplet"
 date: "2020-11-13"
+host: "https://shiplet.dev"
+description: "The CSV writer pattern I commonly use"
+imgUrl: "https://shiplet.dev/static/triangle.png"
+fbUrl: "https://shiplet.dev/post/simple-csv-writer-in-go"
+twDomain: "shiplet.dev"
 ---
 
 Hey future-Shiplet, this is the pattern you usually follow. I gotchu.

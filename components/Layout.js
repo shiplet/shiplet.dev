@@ -2,12 +2,36 @@ import Head from "next/head";
 
 import Header from "./Header";
 
-export default function Layout({ children, pageTitle, description, ...props }) {
+export default function Layout({ children, pageTitle, description, ogData, ...props }) {
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={ogData.url} />
+        <meta property="og:title" content={ogData.fb.title} />
+        <meta
+            property="og:description"
+            content={ogData.description}
+        />
+        <meta
+            property="og:image"
+            content={ogData.imgUrl}
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:domain" value={ogData.tw.domain} />
+        <meta name="twitter:title" value={ogData.tw.title} />
+        <meta
+            name="twitter:description"
+            value={ogData.description}
+        />
+        <meta
+            name="twitter:image"
+            content={ogData.imgUrl}
+        />
+        <meta name="twitter:url" value={ogData.url} />
         <meta name="Description" content={description}></meta>
         <title>{pageTitle}</title>
       </Head>
