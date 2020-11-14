@@ -15,7 +15,7 @@ just like the JavaScript peeps.
 
 So I created this little localServer package! It's not published in git anywhere yet, so I'll update this if/when that happens. But, the 
 gist of what's going on is: I made a stdlib golang http server that captures incoming http events, mocks them to the
-`events.APIGatewayProxyRequest` and `events.APIGatewayProxyResponse` objects which the `aws-lambda-go/events` 
+`events.APIGatewayProxyRequest` and `events.APIGatewayProxyResponse` objects which the `aws-lambda-go/events` package 
 looks for, and then passes those objects to the main AWS handler.
 
 So far it only supports GET, POST, and OPTIONS requests (it throws `Access-Control-Allow-Origin: *` on everything), and it 
