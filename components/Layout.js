@@ -20,7 +20,7 @@ export default function Layout({ children, pageTitle, description, ogData, ...pr
             content={ogData.imgUrl}
         />
 
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:domain" value={ogData.tw.domain} />
         <meta name="twitter:title" value={ogData.tw.title} />
         <meta
