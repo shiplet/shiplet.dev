@@ -36,9 +36,10 @@ import (
 	"net/http"
 )
 
-func LocalServer(endpointMock string, proxyHandler func(event *events.APIGatewayProxyRequest)(*events.APIGatewayProxyResponse, error)) {
+func LocalServer(endpointMock string, port int, proxyHandler func(event *events.APIGatewayProxyRequest)(*events.APIGatewayProxyResponse, error)) {
 	http.HandleFunc(endpointMock, handleLocal(proxyHandler))
-	http.ListenAndServe(":3000", nil)
+	log.Printf("listening on port %d", port)
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", port), nil))
 }
 
 func handleLocal(proxyHandler func(event *events.APIGatewayProxyRequest)(*events.APIGatewayProxyResponse, error)) func(w http.ResponseWriter, r *http.Request) {
@@ -102,7 +103,7 @@ import "main/localServer"
 
 func main() {
 	//lambda.Start(HandleEvent)
-	localServer.LocalServer("/YOUR_ENDPOINT", HandleEvent)
+	localServer.LocalServer("/YOUR_ENDPOINT", 3000, HandleEvent)
 }
 ```
 
