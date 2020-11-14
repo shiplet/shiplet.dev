@@ -87,7 +87,7 @@ func handleLocal(proxyHandler func(event *events.APIGatewayProxyRequest)(*events
 }
 ```
 
-And then to use it in your Netlify function's main.go, add it to a sibling directory called `localServer`, and invoke it
+And then to use it in your Netlify function's `main.go`, add it to a sibling directory called `localServer`, and invoke it
 like so:
 
 ```go
@@ -109,3 +109,8 @@ functionRoot
       localServer
       └──  localServer.go
 ```
+
+And voila! You've got a local server you can test & debug against. Just make sure to move everything back over to the
+`lambda.Start()` once you're finished. Also, it's not COMPLETELY like the JavaScript package, because you'll have to run
+this on a function-by-function basis, rather than at the top of your functions directory, or even better, the project root.
+Future work!
