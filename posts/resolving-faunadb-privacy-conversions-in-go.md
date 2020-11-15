@@ -73,4 +73,4 @@ At that point, both peculiarities are satisfied, and you can get the data you're
 Granted, Fauna probably has some annotations you can append to the struct in order to avoid this issue, similar to how you'd annotate \`json:"value"\` for anything you're trying to json.Marshal into a particular format.
 But I haven't found the documentation on that yet, and it's currently 2:33AM, so I'm not likely going to put that much more effort into it tonight.
 
-Hope this helps some other poor soul though!
+Hope this helps someone else though!
