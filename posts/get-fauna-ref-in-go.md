@@ -11,7 +11,7 @@ twDomain: "shiplet.dev"
 
 The [FaunaDB docs](https://docs.fauna.com/fauna/current/) are pretty thorough, but I've noticed that every example of querying an object by `ref` assumes you already have the ref ID handy.
 
-Take, for instance, this `Update` example in Go:
+Take, for instance, this [Update](https://docs.fauna.com/fauna/current/api/fql/functions/update?lang=go) example in Go:
 
 ```go
 result, _ := client.Query(
