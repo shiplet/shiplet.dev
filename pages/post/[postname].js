@@ -14,13 +14,13 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
     imgUrl: frontmatter.imgUrl,
     fb: {
       url: frontmatter.fbUrl,
-      title: frontmatter.title
+      title: frontmatter.title,
     },
     tw: {
       domain: frontmatter.twDomain,
-      title: frontmatter.title
-    }
-  }
+      title: frontmatter.title,
+    },
+  };
 
   return (
     <>
