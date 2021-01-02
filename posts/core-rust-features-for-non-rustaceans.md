@@ -9,7 +9,7 @@ fbUrl: "https://shiplet.dev/post/thouhts-on-ikenfell"
 twDomain: "shiplet.dev"
 ---
 
-This is a quick overview of some unique Rust features: things you'll find in Rust that you won't readily find in other popular languages. If you're familiar with Javascript, I think of this list as being analogous to a list of JS things like hoisting, prototypes, and the event loop. It's a living document, so if sections are incomplete or empty, that will change in the future!
+This is a quick overview of some unique Rust features: things you'll find in Rust that you won't readily find in other popular languages. If you're familiar with Javascript, I think of this list as being analogous to a list of JS things like hoisting, prototypes, and the event loop. It's a living document, so if sections are missing, incomplete, or empty, that will change in the future!
 
 ## Ownership
 - at any given point, a piece of data can have either, *but not both*, of the following: one mutable reference, or any number of immutable references
