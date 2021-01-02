@@ -16,6 +16,8 @@ This is a quick overview of some unique Rust features: things you'll find in Rus
 - references must always be valid
 
 ## Smart Pointers
+- Smart Pointers are pointers with metadata and methods
+- They abstract a lot of the more granular aspects of memory managment and mutability into their internal structure and public API
 - The most common smart pointers:
     - `String` - closely related to `str`, but `String` owns the contents of the string and provides an API for mutating its internal state
     - `Vec<T>` - a vector of a single type that can grow in size
