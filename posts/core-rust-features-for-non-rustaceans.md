@@ -83,3 +83,37 @@ This is a quick overview of some unique Rust features: things you'll find in Rus
 
 ## Interior Mutability
 - encapsulates unsafe code used to mutate owned data 
+
+------
+
+## Why Rust's Safety Exists
+
+ Rust's guarantees around safety exist in order to mitigate the effects of Undefined Behavior. Think of the MISSINGNO Pokemon - that's basically the effects of deterministic undefined behavior. Rust wants to avoid things like that. Here's how it does it. (This is drawn / copied from the [Rustnomicon](https://doc.rust-lang.org/nomicon/what-unsafe-does.html)).
+
+ Rust's syntax and quirks are designed to prevent the following:
+ - dereferencing dangling or unaligned pointers
+    - a pointer/reference is dangling if it's null or if some of its bytes are part of a different allocation
+ - breaking pointer aliasing rules
+    - a pointer cannot outlive its reference
+    - a mutable reference cannot be aliased
+ - calling a function with the wrong call application binary interface (ABI) or unwinding from a function with the wrong unwind ABI
+ - causing a data race
+    - two or more threads concurrently accessing a location of memory
+    - one or more of them is a write
+    - one or more of them is unsynchronized
+ - executing code compiled with target features that the current thread context does not support
+    - an attribute applied to an unsafe function, which refers to a feature present in the system's chip architecture
+ - producing invalid values
+    - a bool that isn't 1 or 0
+    - an enum with an invalid discriminant
+    - a null fn pointer
+    - a char outside ranges `[0x0, 0xD7FF]` and `[0x0, 0x10FFFF]`
+    - a !
+    - an integer, floating point value, or raw pointer read from uninitialized memory, or uninitialized memory in a str
+        - uninitialized memory being basically a jangled mess of bits that may or may not refer to or form a valid piece of data
+    - a reference/Box that is dangling, unaligned, or points to an invalid value
+    - a wide reference, Box, or raw pointer with invalid metadata:
+        - a `dyn Trait` that's not a pointer to a matching vtable (the table of functions for the trait) for the dynamic trait `Trait`
+        - slice length has to be a valid usize, or else the metadata is invalid
+    - a type with custom invalid values that is one of those values
+        - for example, a `NonNull` that is `null`

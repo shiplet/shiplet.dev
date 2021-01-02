@@ -86,6 +86,13 @@ export default function Layout({
           height: 1rem;
         }
 
+        hr {
+          width: 100%;
+          height: 1px;
+          background-color: #445566;
+          border: none;
+        }
+
         @media all and (max-width: 800px) {
           .content ul {
             padding-left: 10px;
