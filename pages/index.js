@@ -9,13 +9,13 @@ const Index = ({ posts, title, description, ...props }) => {
     imgUrl: "https://shiplet.dev/static/triangle",
     fb: {
       url: "https://shiplet.dev",
-      title: "shiplet.dev"
+      title: "shiplet.dev",
     },
     tw: {
       domain: "shiplet.dev",
-      title: "shiplet.dev"
-    }
-  }
+      title: "shiplet.dev",
+    },
+  };
   return (
     <>
       <Layout pageTitle={title} description={description} ogData={ogData}>
@@ -30,7 +30,7 @@ const Index = ({ posts, title, description, ...props }) => {
 
         <p className="description">
           My name is Michael Shiplet. I'm a software engineer,
-          guitarist/composter, illustrator, runner, rower, and general tinkerer.
+          guitarist/composer, illustrator, runner, rower, and general tinkerer.
           I love going all-in on the things that interest me, and at the
           encouragement of friends and family, I've decided to keep a record of
           things I've learned.
