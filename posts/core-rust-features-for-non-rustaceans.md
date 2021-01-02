@@ -5,7 +5,7 @@ date: "2021-01-01"
 host: "https://shiplet.dev"
 description: "A quick overview of Rust's unique features"
 imgUrl: "https://shiplet.dev/static/triangle.png"
-fbUrl: "https://shiplet.dev/post/thouhts-on-ikenfell"
+fbUrl: "https://shiplet.dev/post/core-rust-features-for-non-rustaceans"
 twDomain: "shiplet.dev"
 ---
 
