@@ -86,9 +86,18 @@ This is a quick overview of some unique Rust features: things you'll find in Rus
 
 ------
 
-## Why Rust's Safety Exists
 
- Rust's guarantees around safety exist in order to mitigate the effects of Undefined Behavior. Think of the MISSINGNO Pokemon - that's basically the effects of deterministic undefined behavior. Rust wants to avoid things like that. Here's how it does it. (This is drawn / copied from the [Rustnomicon](https://doc.rust-lang.org/nomicon/what-unsafe-does.html)).
+## Rust's unsafe features are meant to empower and enable...
+Working with Rust means the compiler is inherently conservative. It'll forbid some valid programs if it means it never allows an invalid program. But, there are some things we, as programmers, can know that the compiler can't know. For example - taking mutable references from two distinct halves of the same vector. Rust doesn't _know_ they're distinct halves, it just knows you're trying to take two mutable references, which breaks one the borrow checker's rules. Fortunately, Rust has an alter-ego - *UNSAFE RUST*. Unsafe Rust lets you do the following:
+
+- Dereference raw pointers
+- Call unsafe functions or methods
+- Access or modifying static mutable variables
+- Implement unsafe traits
+- Access fields on unions
+
+## Rust's safety features are meant to prevent or impede...
+ Rust's guarantees around safety exist in order to mitigate the effects of Undefined Behavior. Think of the MISSINGNO Pokemon - an excellent example from 2020's RustConf - which is the result of a set of deterministic undefined behaviors. Rust wants to avoid things like that. Here's how it does it. (This is drawn / copied from the [Rustnomicon](https://doc.rust-lang.org/nomicon/what-unsafe-does.html)).
 
  Rust's syntax and quirks are designed to prevent the following:
  - dereferencing dangling or unaligned pointers
@@ -117,3 +126,7 @@ This is a quick overview of some unique Rust features: things you'll find in Rus
         - slice length has to be a valid usize, or else the metadata is invalid
     - a type with custom invalid values that is one of those values
         - for example, a `NonNull` that is `null`
+
+
+
+
