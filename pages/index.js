@@ -19,28 +19,30 @@ const Index = ({ posts, title, description, ...props }) => {
   return (
     <>
       <Layout pageTitle={title} description={description} ogData={ogData}>
-        <section className="hero">
-          <img
-            className="bio-img"
-            src="/static/ship.jpg"
-            alt="Shiplet bio picture"
-          />
-          <h1 className="title">shiplet.dev</h1>
-        </section>
+        <div className="page-center">
+          <section className="hero">
+            <img
+              className="bio-img"
+              src="/static/ship.jpg"
+              alt="Shiplet bio picture"
+            />
+            <h1 className="title">shiplet.dev</h1>
+          </section>
 
-        <p className="description">
-          My name is Michael Shiplet. I'm a software engineer,
-          guitarist/composer, illustrator, runner, rower, and general tinkerer.
-          I love going all-in on the things that interest me, and at the
-          encouragement of friends and family, I've decided to keep a record of
-          things I've learned.
+          <p className="description">
+            My name is Michael Shiplet. I'm a software engineer,
+            guitarist/composer, illustrator, runner, rower, and general tinkerer.
+            I love going all-in on the things that interest me, and at the
+            encouragement of friends and family, I've decided to keep a record of
+            things I've learned.
         </p>
-        <p className="description">
-          This is a blog about what I do, and how I do it. I hope you enjoy 🙂
+          <p className="description">
+            This is a blog about what I do, and how I do it. I hope you enjoy 🙂
         </p>
-        <main>
-          <PostList posts={posts} />
-        </main>
+          <main>
+            <PostList posts={posts} />
+          </main>
+        </div>
       </Layout>
       <style jsx>{`
         .hero {
@@ -65,6 +67,15 @@ const Index = ({ posts, title, description, ...props }) => {
           line-height: 1.5em;
           max-width: 800px;
           text-align: center;
+        }
+
+        .page-center {
+          max-width: 800px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto;
         }
       `}</style>
     </>

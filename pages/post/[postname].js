@@ -56,6 +56,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
         article {
           width: 100%;
           max-width: 800px;
+          margin: 0 auto;
         }
         h1 {
           font-size: 3rem;
@@ -70,6 +71,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
           width: 100%;
           max-width: 1200px;
           color: rgb(228, 171, 236);
+          margin: 0 auto;
         }
       `}</style>
     </>

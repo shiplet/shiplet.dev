@@ -72,7 +72,7 @@ export default function Layout({
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
+          align-items: flex-start;
         }
 
         footer {
@@ -102,6 +102,10 @@ export default function Layout({
           color: rgb(199, 146, 234); 
           padding: 3px 6px;
           border-radius: 4px;
+        }
+
+        pre {
+          align-self: center;
         }
 
         @media all and (max-width: 800px) {
