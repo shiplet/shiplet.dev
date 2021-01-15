@@ -38,7 +38,7 @@ export default function PostList({ posts }) {
           flex-wrap: wrap;
         }
         .post-li:hover {
-          color: black;
+          color: rgb(171, 129, 177);
         }
         .date {
           width: 100px;

@@ -27,11 +27,11 @@ export default function Header() {
         }
         nav a {
           margin-right: 20px;
-          color: #00a395;
+          color: rgb(228, 171, 236);
           text-decoration: none;
         }
         nav a:hover {
-          text-decoration: underline;
+          color: rgb(171, 129, 177);
         }
       `}</style>
     </>

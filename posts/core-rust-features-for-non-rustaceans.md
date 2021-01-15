@@ -11,9 +11,49 @@ twDomain: "shiplet.dev"
 
 This is a quick overview of some unique Rust features: things you'll find in Rust that you won't readily find in other popular languages. If you're familiar with Javascript, I think of this list as being analogous to a list of JS things like hoisting, prototypes, and the event loop. It's a living document, so if sections are missing, incomplete, or empty, that will change in the future!
 
+## Types
+- Strict, static typing system
+- dynamically sized types, like strings or vecs, expose a pointer to the data and its length. This allows Rust to standardize the size of such variables - all variables of a single type must occupy the same amount of space in memory. When the variable is a length value and a pointer to the address in memory where a string begins, then technically that variable is the size of two `usize` values (length, pointer), rather than the size of the string it's pointing to.
+    - this behavior is common to all dynamically sized types
+    - remember, all unsized or dynamic types MUST be behind some kind of pointer
+- Tuple struct (or newtype?) initializers look like function calls, for example: `Millimeter(5)`
+    - these initializers are actually implemeted as functions that return an instance of the type constructed from its arguments
+    - this means the initializer functions can be used as function pointers that implement closure traits, allowing them to be used in function signatures that accept closures
+
+## Associated Types
+This example is borrowed from the Rust Reference, with commentary.
+
+The reference definition of associated types uses extremly precise language, which can often sacrifice clarity for brevity. Why use 100 words when 1 previously defined piece of jargon or domain lingo can do the trick? Well, this is my attempt at unzipping that 1 previously defined piece of domain lingo into the 100 words that make most sense to me... at least at the time of writing.
+
+Associated types are placeholder types defined on traits, which allow for generalization of types passed to trait implementations. In other words - as you're designing a trait that performs some general task, and you want to ensure that something implementing your trait maintains a consistent type over the course of a series of functions required by your trait, then you define an associated type, like `type E;` below. Because this is an abstract, unknown type, you're enabling a future program to implement this trait such that `E` could be a primitive like `i32` or `bool`, something more complex, perhaps a custom type `Daemon` or `Process`, or a generic like `T`.
+
+See the example below for a minimal implementation.
+
+```rust
+trait Container {
+    type E;
+    fn empty() -> Self;
+    fn insert(&mut self, elem: Self::E);
+}
+
+impl<T> Container for Vec<T> {
+    type E = T;
+    fn empty() -> Vec<T> { Vec::new() }
+    fn insert(&mut self, x: T) { self.push(x); }
+}
+```
+
+The `associated type` is defined on the trait itself as `type E;`. This tells the rust compiler that any type that implements `Container` must also implement a definition for `E`.
+
+The trait implementation below provides the `associated type definition`. This is the part where the associated type receives its definition, in this case the generic type `T`. In this case, the placeholder has been filled by a generic rather than a concrete type.
+
 ## Ownership
 - at any given point, a piece of data can have either, *but not both*, of the following: one mutable reference, or any number of immutable references
 - references must always be valid
+
+## Return Values
+- To return a value out of a Rust function, you omit the `;` semicolon on the final line of the function
+- If the final line of the function contains a semicolon, it implicitly returns nothing, and the return type is `()`, canonically known as the `unit type`. It has only one value, `()`.
 
 ## Smart Pointers
 - Smart Pointers are pointers with metadata and methods
@@ -41,9 +81,6 @@ This is a quick overview of some unique Rust features: things you'll find in Rus
             - can only coerce a mutable type into an immutable type, because in going from immutable to mutable, Rust is unable to guarantee that the mutable reference is the *only* such reference to that chunk of data.
     - Example: `&String` and `&str` can be used interchangeably
 
-## Pattern Matching
-- forthcoming
-
 ## Traits
 - Traits are encapsulated behavioral abstractions that can be shared across an arbitrary number of discrete types
     - which is a fancy way of saying that several types can have similar behaviors if they implement the signature required by the Trait
@@ -54,6 +91,7 @@ This is a quick overview of some unique Rust features: things you'll find in Rus
             pub components: Vec<Box<dyn Draw>>,
         }
       ```
+    - in order to use traits as trait objects, they MUST go behind a pointer, like `Box` or `Rc`/`Arc`. This is because traits are also dynamically sized.
     - `Box<dyn Draw>` is the Trait Object. It refers to any type inside a Box, as long as that type implements the `Draw` trait.
     - the `dyn` is the piece, or the Trait feature, that indicates this is a Trait Object and that there is an expected abstraction of behavior in the `Draw` trait, which every entity that encounters it must implement.
     - Rust deliberately avoids refering to things as "objects" the way that other languages do. Structs and Enums are the primary object-like entities, but they differ because they separate data and behavior, whereas object-oriented or class-based languages will combine data and behavior in the same object.
@@ -117,7 +155,7 @@ Working with Rust means the compiler is inherently conservative. It'll forbid so
     - an enum with an invalid discriminant
     - a null fn pointer
     - a char outside ranges `[0x0, 0xD7FF]` and `[0x0, 0x10FFFF]`
-    - a !
+    - a ! (never type?)
     - an integer, floating point value, or raw pointer read from uninitialized memory, or uninitialized memory in a str
         - uninitialized memory being basically a jangled mess of bits that may or may not refer to or form a valid piece of data
     - a reference/Box that is dangling, unaligned, or points to an invalid value

@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { nord } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 class CodeBlock extends PureComponent {
   static propTypes = {
@@ -18,7 +18,7 @@ class CodeBlock extends PureComponent {
     return (
       <SyntaxHighlighter
         language={language}
-        style={nord}
+        style={materialDark}
         customStyle={{ maxWidth: "90vw" }}
       >
         {value}

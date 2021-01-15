@@ -34,12 +34,13 @@ export default function Layout({
 
         html,
         body {
+          background-color: rgb(74, 74, 77);
           margin: 0;
           padding: 0;
           font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
             Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
             sans-serif;
-          color: #445566;
+          color: rgba(255, 255, 255, 0.78);
         }
 
         h1,
@@ -52,7 +53,10 @@ export default function Layout({
         }
 
         a {
-          color: #00a395;
+          color: rgb(228, 171, 236);
+        }
+        a:hover {
+          color: rgb(171, 129, 177);
         }
 
         .content p,
@@ -93,6 +97,13 @@ export default function Layout({
           border: none;
         }
 
+        code {
+          background-color: rgb(47, 47, 47);
+          color: rgb(199, 146, 234); 
+          padding: 3px 6px;
+          border-radius: 4px;
+        }
+
         @media all and (max-width: 800px) {
           .content ul {
             padding-left: 10px;
@@ -105,11 +116,8 @@ export default function Layout({
       </section>
       <footer>
         <p>
-          I borrowed this blog template from {` `}
-          <a href="https://github.com/cassidoo/next-netlify-blog-starter">
-            cassidoo
-          </a>
-          . (Thank you 🙏🏻)
+          Thanks for reading 🙏🏻
+          <br/>- Ship
         </p>
       </footer>
     </>
