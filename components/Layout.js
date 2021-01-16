@@ -102,6 +102,7 @@ export default function Layout({
           color: rgb(199, 146, 234); 
           padding: 3px 6px;
           border-radius: 4px;
+          font-size: 1.15em;
         }
 
         pre {
