@@ -32,7 +32,7 @@ const Index = ({ posts, title, description, ...props }) => {
           <p className="description">
             My name is Michael Shiplet. I'm a software engineer,
             guitarist/composer, illustrator, runner, rower, and general tinkerer.
-            I love going all in on the things that interest me, and at the
+            I love going all-in on the things that interest me, and at the
             encouragement of friends and family, I've decided to keep a record of
             things I've learned.
         </p>
