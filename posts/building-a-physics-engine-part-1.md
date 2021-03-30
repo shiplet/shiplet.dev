@@ -29,6 +29,4 @@ Speaking of maintainable, here are my goals for the project: keep it small, writ
 
 I'll also keep track of what I'm learning in this series of blog posts in the form of an interactive, phase-based website. You can follow along here: [https://comaphysics.com](https://comaphysics.com). Why's it called Coma Physics you ask? Because comets are super cool, and one of the core elements of the comet is this layer of gas that surrounds the actual chunk of space rock, and that layer of gas is called The Coma. Combine that with the fact that physics are a core element of many games? Coma Physics.
 
-Oh, also also. I'm learning these things from a book. The book is [Game Physics Engine Development: How to Build a Robust Commercial-Grade Physics Engine for your Game](https://www.amazon.com/Game-Physics-Engine-Development-Commercial-Grade/dp/0123819768) (GPED) by Ian Millington. I may bring in other resources, and I'll note them when I do, but as of now GPED will be my main source of information.
-
 Alright! Let's go make some stuff fly around the screen!
