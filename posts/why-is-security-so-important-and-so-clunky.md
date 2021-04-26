@@ -37,7 +37,7 @@ _predictability of human motivations_. The interplay between these two forces ra
 that affect nearly every element of technology and how we interact with it. It also, to the furthest extent possible,
 shifts the burden of responsibility to the consumer through individual liability, rather than the engineer.
 
-This exchange is predicated on and enforceable through a basic social contract between the engineer and the consumer. 
+This exchange is predicated on and enforceable through a social contract between the engineer and the consumer. 
 The engineer's portion of the contract is that they've done their due diligence in simplifying & streamlining 
 usage while also hardening against attack vectors, and that if the consumer uses the product _in the way in which it's intended_, 
 they'll be kept safe. The consumer's portion of the contract is that they'll follow these guidelines, indeed use the product as intended, 
