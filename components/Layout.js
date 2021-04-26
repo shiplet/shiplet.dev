@@ -93,7 +93,7 @@ export default function Layout({
         hr {
           width: 100%;
           height: 1px;
-          background-color: #445566;
+          background-color: rgba(255,255,255,0.78);
           border: none;
         }
 
