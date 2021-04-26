@@ -14,7 +14,7 @@ _to be exhaustive or dogmatic._
 
 ---
 
-Information Security is important because it's the technological response to plotholes in our collective understanding of computers.
+Information Security is important because it's the technological response to plotholes in our collective understanding of computers and the people who use them.
 
 Aside from the _lowest_ levels of physics and electrical engineering at work in the design of chips - or
 the things that turn electricity into logic - and many times even then, every functional layer of a computer is the result of a decision
