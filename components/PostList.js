@@ -20,9 +20,6 @@ export default function PostList({ posts }) {
     (p) => !p?.frontmatter?.hasOwnProperty("categorySlug")
   );
 
-  console.log(categoriedPosts);
-  console.log(freeformPosts);
-
   return (
     <div>
       {!posts && <div>No posts!</div>}
