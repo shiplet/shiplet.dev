@@ -34,7 +34,7 @@ Each key you press generates an event that's stored by the browser, and the brow
 ![A stack represented by four boxes, with the letters "p", "i", "h", and "s"](/static/stack_entry.png)
 
 Each letter-in-a-box above represents one of those events, and they're entered into the stack in the order they occur.
-When you hit your "undo" shortcut, the browser goes to the stack of events, removes the top, most-recent event, and reverses the operation it performed.
+When you hit your "undo" shortcut, the browser goes to the stack of events, removes the top, most recent event, and reverses the operation it performed.
 This act of taking the top, most recent item off of the stack is known as a `pop`. Conversely, adding an item to the end of a stack is known as a `push`.
 
 ### Why Stacks?
