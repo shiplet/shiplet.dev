@@ -13,7 +13,7 @@ I got into programming because I wanted to build video games. I love telling sto
 
 But I never _truly_ gave up on it. The more research I did, the more people I found saying things like, "Just learn Unity or Unreal! There are TONS of tutorials. If you really want to build games, then you should start working with whatever's available to you!" First off - that feels super gatekeeper-y. "If you _really_ want to build games..." What if I want to build games in a particular way? What if I just like knowing how things work? What if I want to understand all of the underlying game systems? But, secondly, _did_ I really want to build a game? What if these people were right? What if I had all the skills (except programming) and all the tools necessary, but the fact that I wasn't using them meant I actually didn't want to do anything with them?
 
-Fast forward seven years, and now I have the programming skills. I'm a Senior Software Engineer at one of the biggest tech companies in my area, I'm a tech lead on one of its core products, and I can lead workshops on languages like Rust and Go (and JS and Python and C# and...). And yet, I still haven't built my game. And I haven't built it for one. major. reason.
+Fast forward seven years, and now I have the programming skills. I'm a Software Engineer at one of the biggest tech companies in my area, I'm a tech lead on one of its core products, and I can lead workshops on languages like Rust and Go (and JS and Python and C# and...). And yet, I still haven't built my game. And I haven't built it for one. major. reason.
 
 I'm still not sure that building a game is what I want to do. After seven grueling years of self-education, five years of on-the-job blood (yes blood!), sweat, and tears, overhauling how I write and compose music, and taking professional illustration classes, I find that building a game, in and of itself, isn't _that_ big of a draw for me. However, I have identified what is a draw.
 
@@ -28,7 +28,5 @@ My idea is simple: build a small physics engine for DOM elements. And not even e
 Speaking of maintainable, here are my goals for the project: keep it small, written in TypeScript, unit-tested, and open source. In fact, here's the [repo](https://github.com/shiplet/coma-physics). It's still a baby, so don't expect anything major yet. It'll get there.
 
 I'll also keep track of what I'm learning in this series of blog posts in the form of an interactive, phase-based website. You can follow along here: [https://comaphysics.com](https://comaphysics.com). Why's it called Coma Physics you ask? Because comets are super cool, and one of the core elements of the comet is this layer of gas that surrounds the actual chunk of space rock, and that layer of gas is called The Coma. Combine that with the fact that physics are a core element of many games? Coma Physics.
-
-Oh, also also. I'm learning these things from a book. The book is [Game Physics Engine Development: How to Build a Robust Commercial-Grade Physics Engine for your Game](https://www.amazon.com/Game-Physics-Engine-Development-Commercial-Grade/dp/0123819768) (GPED) by Ian Millington. I may bring in other resources, and I'll note them when I do, but as of now GPED will be my main source of information.
 
 Alright! Let's go make some stuff fly around the screen!
