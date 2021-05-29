@@ -31,14 +31,14 @@ const Index = ({ posts, title, description, ...props }) => {
 
           <p className="description">
             My name is Michael Shiplet. I'm a software engineer,
-            guitarist/composer, illustrator, runner, rower, and general tinkerer.
-            I love going all-in on the things that interest me, and at the
-            encouragement of friends and family, I've decided to keep a record of
-            things I've learned.
-        </p>
+            guitarist/composer, illustrator, runner, rower, and general
+            tinkerer. I love going all-in on the things that interest me, and at
+            the encouragement of friends and family, I've decided to keep a
+            record of things I've learned.
+          </p>
           <p className="description">
             This is a blog about what I do, and how I do it. I hope you enjoy 🙂
-        </p>
+          </p>
           <main>
             <PostList posts={posts} />
           </main>
@@ -76,6 +76,15 @@ const Index = ({ posts, title, description, ...props }) => {
           align-items: center;
           justify-content: center;
           margin: 0 auto;
+        }
+
+        @media all and (max-width: 1024px) {
+          .bio-img {
+            width: 70px;
+          }
+          .title {
+            font-size: 2rem;
+          }
         }
       `}</style>
     </>

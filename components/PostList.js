@@ -83,7 +83,7 @@ export default function PostList({ posts }) {
         }
         @media all and (max-width: 800px) {
           .title {
-            width: 100%;
+            width: auto;
             padding-left: 15px;
           }
         }

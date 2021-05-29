@@ -34,6 +34,7 @@ export default function Layout({
 
         html,
         body {
+          width: 100%;
           background-color: rgb(74, 74, 77);
           margin: 0;
           padding: 0;
