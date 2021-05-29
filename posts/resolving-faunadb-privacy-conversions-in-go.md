@@ -2,6 +2,8 @@
 title: "Resolving FaunaDB Privacy Conversions in Go"
 author: "Shiplet"
 date: "2020-11-15"
+categorySlug: "serverless-in-go"
+categoryTitle: "Serverless in Go"
 host: "https://shiplet.dev"
 description: "The result of researching a maddening error"
 imgUrl: "https://shiplet.dev/static/triangle.png"

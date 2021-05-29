@@ -2,6 +2,8 @@
 title: "How to Get a Fauna Value's Ref in Go"
 author: "Shiplet"
 date: "2020-11-14"
+categorySlug: "serverless-in-go"
+categoryTitle: "Serverless in Go"
 host: "https://shiplet.dev"
 description: "An example of how to get an object's ref with fauna & go"
 imgUrl: "https://shiplet.dev/static/triangle.png"

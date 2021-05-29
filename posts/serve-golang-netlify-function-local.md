@@ -2,6 +2,8 @@
 title: "How to Serve Golang Netlify Functions Locally"
 author: "Shiplet"
 date: "2020-11-13"
+categorySlug: "serverless-in-go"
+categoryTitle: "Serverless in Go"
 host: "https://shiplet.dev"
 description: "A quick & dirty local server for Netlify functions written in golang"
 imgUrl: "https://shiplet.dev/static/triangle.png"

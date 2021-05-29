@@ -93,13 +93,13 @@ export default function Layout({
         hr {
           width: 100%;
           height: 1px;
-          background-color: #445566;
+          background-color: rgba(255, 255, 255, 0.78);
           border: none;
         }
 
         code {
           background-color: rgb(47, 47, 47);
-          color: rgb(199, 146, 234); 
+          color: rgb(199, 146, 234);
           padding: 3px 6px;
           border-radius: 4px;
           font-size: 1.15em;
@@ -107,6 +107,12 @@ export default function Layout({
 
         pre {
           align-self: center;
+        }
+
+        .content img {
+          width: 75%;
+          display: block;
+          margin: 0 auto;
         }
 
         @media all and (max-width: 800px) {
@@ -122,7 +128,7 @@ export default function Layout({
       <footer>
         <p>
           Thanks for reading 🙏🏻
-          <br/>- Ship
+          <br />- Ship
         </p>
       </footer>
     </>
