@@ -50,7 +50,7 @@ In short, stacks are great at being a repository of high-performance, low-mainte
 That's why they're used for `undo` operations, but they're commonly used in compilers while reading syntax tokens, as well as pathfinding algorithms in order to track decisions.
 You'll also encounter one of the most common use cases while debugging an application: the `call stack`.
 Each item of a call stack represents a function call and the program context under which it was called.
-This allows each layer the program, procedure, or subroutine to quickly reassume the proper memory context once the function below it returns or finishes.
+This allows each layer the program, procedure, or subroutine to quickly resume the proper memory context once the function below it returns or finishes.
 
 ### How am I Supposed to Know These Things Unless I'm Taught Them?
 
@@ -133,7 +133,7 @@ The first being that Rust doesn't really have a concept of a `Class` the same wa
 Rust has `Structs` and `Enums`, which can have object-like characteristics, but are their own entities.
 For a more in-depth discussion of these differences, see my post [Core Rust Features for Non-Rustaceans](https://shiplet.dev/post/core-rust-features-for-non-rustaceans).
 
-The main thing to notice here is that, because Rust is a statically typed, and in order to make our `Stack` usable for a wider range of data types, it contains some `generic` parameters.
+The other thing to notice here is that, because Rust is statically typed, and in order to make our `Stack` usable for a wider range of data types, it contains some `generic` parameters.
 Generic parameters signal to the Rust compiler that you anticipate this `struct` being used for a wide variety of data types.
 I'll call these out in code comments below.
 
@@ -190,16 +190,17 @@ impl<T> Stack<T> {
 
 Some clarifications: the `impl` block is Rust's way of saying, "implement these methods for this data type."
 So in the case of our `Stack` struct, we have a `stack` property, which is of a type `Vec<T>` or a "vector of data of type `T`, whatever `T` might be."
-That `T` could refer to integers, strings, or more complex data types.
+That `T` could refer to integers, strings, or other more complex data types.
 
 Notice also the difference between the return types of `pop` and `peek`.
 `pop` returns an `Option<T>`, but `peek` returns `Option<&T>`.
 The `&` in `Option<&T>` indicates we're returning a _reference_ to the data at that location, rather than the data itself.
 Whereas in `pop`, because it's `Option<T>`, we know that we're receiving the data itself, and that the data will no longer belong to the stack.
+This is how Rust handles non-destructive vector indexing in this case, and I dig how explicit it is!
 
 ### Stacks!
 
 I hope this answers some questions about stacks!
 I definitely learned some new things and am feeling a bit more confident after writing it, so I can only hope that some of that transfers to you as well.
 
-Also, up next are Queues! Stay tuned :) 
+Up next are Queues! Stay tuned :) 
