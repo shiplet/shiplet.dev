@@ -40,7 +40,7 @@ Of those 4, here's how things would typically go:
 1. exercise => I push *way* too hard, like body-harmingly hard
 2. music => I play *way* too hard, like shred my fingers and melt my ears hard
 3. video games => I play *way* too long, like lose myself in escapist fantasy lands until I'm shaken back to reality by bodily functions (mine or otherwise)
-4. chorse => these actually tend to go okay, but what suffers is the prioritization; i.e. it could be well past time to start preparing dinner, but for some reason I'm cleaning the back porch, or I've gone to the grocery store and come back with a box of cereal, a couple protein bars, and some frozen waffles...
+4. chores => these actually tend to go okay, but what suffers is the prioritization; i.e. it could be well past time to start preparing dinner, but for some reason I'm cleaning the back porch, or I've gone to the grocery store and come back with a box of cereal, a couple protein bars, and some frozen waffles...
 
 So here I am. It's 4:55 PM and I've spent nearly 8 consecutive hours reading documentation, and instead of spiraling into one of those 4 whirlpools, I wrote this. I feel good. I feel ready to handle the rest of the night, and do so in a way that supports not only myself, but the people around me as well.
 
